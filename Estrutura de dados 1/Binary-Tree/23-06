@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct tree{
+    int value;
+    struct tree* left;
+    struct tree* right;
+}Tree;
+
+Tree* initialize();
+Tree* create(int v, Tree* exl, Tree* exr);
+void printTree(Tree* t);
+
+int main(void){
+    Tree* t1;
+
+    t1 = initialize();
+    t1 = create(3, NULL, NULL);
+    t1->left = create(2, NULL, NULL);
+    printTree(t1);
+
+    return 0;
+}
+
+Tree* initialize(){
+    return NULL;
+}
+
+Tree* create(int v, Tree* exl, Tree* exr){
+    Tree* t = (Tree*)malloc(sizeof(Tree));
+
+    if(t == NULL){
+        printf("\nAllocation failed!\n");
+        return t;
+    }
+
+    t->value = v;
+    t->left = exl;
+    t->right = exr;
+}
+
+//raiz sae sad
+void printTree(Tree* t){
+    if(t != NULL){
+        printf("%d - ", t->value);
+        printTree(t->left);
+        printTree(t->right);
+    }
+}
