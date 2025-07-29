@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Person
-{
+typedef struct Person{
     int id;
     int age;
     char name[50];
@@ -13,8 +12,7 @@ Person *initialize();
 Person *insert_b(Person *p1, int id, int age, char name[]);
 void printP(Person *p1);
 
-int main(void)
-{
+int main(void){
     Person *p1;
 
     p1 = initialize();
@@ -24,13 +22,11 @@ int main(void)
     return 0;
 }
 
-Person *initialize()
-{
+Person *initialize(){
     return NULL;
 }
 
-Person *insert_b(Person *p1, int id1, int age1, char name1[])
-{
+Person *insert_b(Person *p1, int id1, int age1, char name1[]){
     Person *p = (Person *)malloc(sizeof(Person));
 
     if (p == NULL)
@@ -40,14 +36,14 @@ Person *insert_b(Person *p1, int id1, int age1, char name1[])
 
     p->id = id1;
     p->age = age1;
+    // Copy 'name1' to 'p->name', preventing potential overflow
     snprintf(p->name, sizeof(p->name), "%s", name1);
     p->next = p1;
 
     return p;
 }
 
-void printP(Person *p1)
-{
+void printP(Person *p1){
     Person *p;
 
     for (p = p1; p != NULL; p = p->next)
