@@ -1,106 +1,58 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-// Struct para nó do tipo lista
-typedef struct Lista{
-    int valor;
-    struct Lista* proximo;
-}Lista;
+typedef struct Person
+{
+    int id;
+    int age;
+    char name[50];
+    struct Person *next;
+} Person;
 
-// Protótipo funções
-Lista* inicializa(); // Função que inicializa a lista com NULL
-int contaNos(Lista *l); // Função que retorna a quantidade de nós presentes em uma lista
-Lista* insere_inicio(Lista* l, int v);
-Lista* insere_3p(Lista*l, int v);
-Lista* insere_fim(Lista* l, int v);
-void imprimir(Lista* l);
+Person *initialize();
+Person *insert_b(Person *p1, int id, int age, char name[50]);
+void printP(Person *p1);
 
-int main(void){
-    Lista *lista1;
+int main(void)
+{
+    Person *p1;
 
-    lista1 = inicializa();
-    lista1 = insere_inicio(lista1, 8);
-    lista1 = insere_fim(lista1, 12);
-    imprimir(lista1);
+    p1 = initialize();
+    p1 = insert_b(p1, 1, 25, "joao");
+    printP(p1);
 
     return 0;
 }
 
-Lista* inicializa(){
+Person *initialize()
+{
     return NULL;
 }
 
-int contaNos(Lista *l){
-    int cont = 0;
-    while (l != NULL) {
-        cont++;
-        l = l->proximo;
-    }
-    return cont;
-}
+Person *insert_b(Person *p1, int id1, int age1, char name1[50])
+{
+    Person *p = (Person *)malloc(sizeof(Person));
 
-
-Lista* insere_inicio(Lista* l /* L é para dar retorno na função*/, int v){
-    Lista* novo = (Lista*)malloc(sizeof(Lista));
-
-    novo->valor = v;
-    novo->proximo = l; // Recebe l pois é o inicio da lista
-    return novo;
-}
-
-Lista* insere_3p(Lista* l, int v){
-    Lista* novo = (Lista*)malloc(sizeof(Lista));
-    Lista* aux;
-    Lista* pn;
-    int cont, nos;
-
-    novo->valor = v;
-
-    if(nos > 2){
-		while(aux != NULL && cont < 2){ // cont inicia em 1, incrementa no while, chega em 2; para.
-			cont++;
-			aux = aux->proximo; // Vai pra segunda posição
-		}
-		pn = aux->proximo; // Armazena temporariamente a próxima posição em relação a atual (2 atual, armazena 3) 
-		aux->proximo = novo; // Liga aux com novo; valor que será inserido na 3 posicao
-		novo->proximo = pn; // pn que estava com guardando a 3 posicao é linkado ao resto da lista
-	}
-}
-
-Lista* insere_fim(Lista* l, int v){
-    Lista* novo = (Lista*)malloc(sizeof(Lista));
-    Lista* aux;
-    
-    if(novo != NULL){
-        novo->valor = v;
-        novo->proximo = NULL;
-        
-        // É o primeiro nó? se sim ->
-        if(l == NULL){
-            return novo;
-        }
+    if (p == NULL)
+    {
+        return p;
     }
 
-    if(l != NULL){
-            aux = l;
-			while(aux->proximo != NULL){
-				aux = aux->proximo;
-            }
-			aux->proximo = novo;
-			return l;
-    }else{
-        printf("\nErro na alocacao");
-        return l;
-    }
+    p->id = id1;
+    p->age = age1;
+    strcpy(p->name, name1); // Copia a string 'name1' para 'p->name
+    p->next = p1;
+
+    return p;
 }
 
-void imprimir(Lista* l){
-    Lista* aux = l;
+void printP(Person *p1)
+{
+    Person *p;
 
-    printf("\nLista: ");
-    while(aux != NULL){
-        printf("%d->", aux->valor);
-        aux = aux->proximo;
+    for (p = p1; p != NULL; p = p->next)
+    {
+        printf("id: %d, age: %d, name: %s\n", p->id, p->age, p->name);
     }
-    printf("\n");  
 }
