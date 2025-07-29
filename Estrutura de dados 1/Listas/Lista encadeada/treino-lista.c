@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 typedef struct Person
 {
@@ -11,7 +10,7 @@ typedef struct Person
 } Person;
 
 Person *initialize();
-Person *insert_b(Person *p1, int id, int age, char name[50]);
+Person *insert_b(Person *p1, int id, int age, char name[]);
 void printP(Person *p1);
 
 int main(void)
@@ -30,7 +29,7 @@ Person *initialize()
     return NULL;
 }
 
-Person *insert_b(Person *p1, int id1, int age1, char name1[50])
+Person *insert_b(Person *p1, int id1, int age1, char name1[])
 {
     Person *p = (Person *)malloc(sizeof(Person));
 
@@ -41,7 +40,7 @@ Person *insert_b(Person *p1, int id1, int age1, char name1[50])
 
     p->id = id1;
     p->age = age1;
-    strcpy(p->name, name1); // Copia a string 'name1' para 'p->name
+    snprintf(p->name, sizeof(p->name), "%s", name1);
     p->next = p1;
 
     return p;
