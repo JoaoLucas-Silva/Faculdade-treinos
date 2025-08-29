@@ -4,7 +4,7 @@ public class Calculo{
 
 	public static void main(String arg[]){
 		
-		leitura l = new leitura();
+		Leitura02 l = new Leitura02();
 		
 		int a, b, result, op;
 
