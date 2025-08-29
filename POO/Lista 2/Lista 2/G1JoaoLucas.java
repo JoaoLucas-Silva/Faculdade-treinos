@@ -4,7 +4,7 @@ public class G1JoaoLucas{
 
 	public static void main(String arg[]){
 		
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 		
 		int a, b, result, op;
 

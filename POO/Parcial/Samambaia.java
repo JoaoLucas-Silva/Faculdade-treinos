@@ -1,7 +1,7 @@
 // João Lucas Silva de Souza; RA: 2649250
 
 // Herança
-public class Samambaia extends Planta implements RegarPlanta{
+public class Samambaia extends Planta1 implements RegarPlanta{
 
 	private String tipoFolhagem;
 	private int tamFolha;
@@ -13,8 +13,8 @@ public class Samambaia extends Planta implements RegarPlanta{
 	}
   
   // Polimorfismo sobrecarga
-	public Samambaia(String nome, String grupoPlanta, Ambiente ambiente, String tipoFolhagem, double qntAgua, int tamFolha, double tamanho){ 
-		super(nome, grupoPlanta, ambiente, qntAgua, tamanho);
+	public Samambaia(String nome, String grupoPlanta, Ambiente1 ambiente1, String tipoFolhagem, double qntAgua, int tamFolha, double tamanho){
+		super(nome, grupoPlanta, ambiente1, qntAgua, tamanho);
 		this.tipoFolhagem = tipoFolhagem;
 		this.tamFolha = tamFolha;
 	}

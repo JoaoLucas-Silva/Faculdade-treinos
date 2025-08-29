@@ -2,7 +2,7 @@ public class LetraFrase{
 
 	public static void main(String arg[]){
 
-		Leitura l = new Leitura();
+		leitura l = new leitura();
         	String frase, letra;
         	int i, contador = 0;
 

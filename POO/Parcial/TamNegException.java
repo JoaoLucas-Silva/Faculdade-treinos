@@ -2,13 +2,13 @@
 
 public class TamNegException extends Exception{
 	
-		Leitura l = new Leitura();
-	
+		Leitura5 l = new Leitura5();
+
 		public void negativoTam(){
 			System.out.println("\nTamanho deve ser positivo e maior que 0!");
 		}
 		
-		public Planta rePlantaNeg(Planta plantas){
+		public Planta1 rePlantaNeg(Planta1 plantas){
 			
 			try{
 				plantas.setTamanho(Integer.parseInt(l.entDados("\nTamanho negativo ou zero, digite outro: ")));

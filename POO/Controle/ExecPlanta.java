@@ -4,9 +4,9 @@ public class ExecPlanta{
 
 	public static void main(String arg[]){
 
-		Leitura l = new Leitura();
-		Cacto c1 = new Cacto();
-		Samambaia s1 = new Samambaia();
+		Leitura3 l = new Leitura3();
+		Cacto1 c1 = new Cacto1();
+		Samambaia1 s1 = new Samambaia1();
 
 		c1.setNome(l.entDados("\nDigite o nome do Cacto: "));
 		c1.setGrupoPlanta(l.entDados("\nDigite o grupo do Cacto: "));

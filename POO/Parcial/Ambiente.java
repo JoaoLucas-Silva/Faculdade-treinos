@@ -4,19 +4,19 @@ public class Ambiente{
 
 	private float temperatura;
     	private String iluminacao;
-    	private Localizacao localizacao;
+    	private Localizacao1 localizacao1;
 
     	public Ambiente(){
         	temperatura = 0;
         	iluminacao = "";
-        	localizacao = new Localizacao();
+        	localizacao1 = new Localizacao1();
     	}
     
     // Polimorfismo sobrecarga
-    	public Ambiente(float temperatura, String iluminacao, Localizacao localizacao){
+    	public Ambiente(float temperatura, String iluminacao, Localizacao1 localizacao1){
         	this.temperatura = temperatura;
         	this.iluminacao = iluminacao;
-        	this.localizacao = localizacao;
+        	this.localizacao1 = localizacao1;
     	}
 
     	public void setTemperatura(float temperatura){
@@ -35,11 +35,11 @@ public class Ambiente{
         	return iluminacao;
     	}
 
-    	public void setLocalizacao(Localizacao localizacao){
-        	this.localizacao = localizacao;
+    	public void setLocalizacao(Localizacao1 localizacao1){
+        	this.localizacao1 = localizacao1;
     	}
 
-    	public Localizacao getLocalizacao(){
-        	return localizacao;
+    	public Localizacao1 getLocalizacao(){
+        	return localizacao1;
     	}
 }

@@ -1,11 +1,9 @@
 // João Lucas Silva de Souza; RA: 2649250
 
-import java.io.IOException;
-
 public class Principal {
 
 	public static void main(String arg[]) {
-		Leitura l = new Leitura();
+		Leitura5 l = new Leitura5();
 		Cacto c1 = null;
 		Samambaia s1 = null;
 		Anturio a1 = null;
@@ -35,7 +33,7 @@ public class Principal {
     }while(continua == true);
   }
 
-	public static Cacto cadastrarCacto(Leitura l) {
+	public static Cacto cadastrarCacto(Leitura5 l) {
 		Cacto c1 = new Cacto();
 		c1.setNome(l.entDados("\nDigite o nome do Cacto: "));
 		c1.setGrupoPlanta(l.entDados("\nDigite o grupo do Cacto: "));
@@ -76,7 +74,7 @@ public class Principal {
 		return c1;
 	}
 
-	public static Samambaia cadastrarSamambaia(Leitura l) {
+	public static Samambaia cadastrarSamambaia(Leitura5 l) {
 		Samambaia s1 = new Samambaia();
 		s1.setNome(l.entDados("\n\nDigite o nome da Samambaia: "));
 		s1.setGrupoPlanta(l.entDados("\nDigite o grupo da Samambaia: "));
@@ -103,7 +101,7 @@ public class Principal {
 		}
 		
 		System.out.println("\n\n===== Dados da Samambaia =====");
-	  System.out.println("Nome: " + s1.getNome());
+	    System.out.println("Nome: " + s1.getNome());
 		System.out.println("Grupo: " + s1.getGrupoPlanta());
 		System.out.println("Tamanho: " + s1.getTamanho());
 		System.out.println("Quantidade regada de agua: " + s1.getQntAgua() + " ml");
@@ -117,7 +115,7 @@ public class Principal {
 		return s1;
 	}
 
-	public static Anturio cadastrarAnturio(Leitura l) {
+	public static Anturio cadastrarAnturio(Leitura5 l) {
 		Anturio a1 = new Anturio();
 		a1.setNome(l.entDados("\n\nDigite o nome da Anturio: "));
 		a1.setGrupoPlanta(l.entDados("\nDigite o grupo da Anturio: "));

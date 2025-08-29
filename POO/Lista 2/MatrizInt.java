@@ -2,8 +2,8 @@
 
 public class MatrizInt{
 	public static void main(String arg[]){
-	
-		Leitura l = new Leitura();
+
+		leitura l = new leitura();
 		int mat[][], i, j, lin = 3, col = 3;
 
 		mat = new int[lin][col];
@@ -13,12 +13,12 @@ public class MatrizInt{
 				mat[i][j] = Integer.parseInt(l.entDados("\nDigite o valor da linha: "+i+" coluna "+j+" da matriz"));
 			}
 		}
-		
+
 
 		for(i = mat.length - 1; i >= 0; i--){
 			for(j = mat.length - 1; j >= 0; j--){
 				System.out.println("Matriz lin "+i+" coluna "+j+" tem valor: "+mat[i][j]);
 			}
-		}		
+		}
 	}
 }

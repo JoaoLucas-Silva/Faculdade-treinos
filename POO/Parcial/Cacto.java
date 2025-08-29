@@ -1,7 +1,7 @@
 // João Lucas Silva de Souza; RA: 2649250
 
 // Herança
-public class Cacto extends Planta implements RegarPlanta{
+public class Cacto extends Planta1 implements RegarPlanta{
 
 	private int quantEspinhos;
 	private String toleranciaSeca;
@@ -13,8 +13,8 @@ public class Cacto extends Planta implements RegarPlanta{
 	}
   
   // Polimorfismo sobrecarga
-	public Cacto(String nome, String grupoPlanta, Ambiente ambiente, int quantEspinhos, String toleranciaSeca, double qntAgua, double tamanho){
-		super(nome, grupoPlanta, ambiente, qntAgua, tamanho);
+	public Cacto(String nome, String grupoPlanta, Ambiente1 ambiente1, int quantEspinhos, String toleranciaSeca, double qntAgua, double tamanho){
+		super(nome, grupoPlanta, ambiente1, qntAgua, tamanho);
 		this.quantEspinhos = quantEspinhos;
 		this.toleranciaSeca = toleranciaSeca;
 	}

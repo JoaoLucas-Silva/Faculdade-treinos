@@ -3,7 +3,7 @@
 public class ParImpar{
 
 	public static void main(String arg[]){
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 		
 		int valor;
 

@@ -1,7 +1,7 @@
 public class TstPes {
     public static void main(String[] args) {
         Pessoa p1 = new Pessoa();
-        Leitura l = Leitura.geraLeitura();
+        Leitura4 l = Leitura4.geraLeitura();
         
         p1.setCpf(Integer.parseInt(l.entDados("\nCpf: ")));
         p1.setNome(l.entDados("\nNome: "));

@@ -3,7 +3,7 @@
 public class VetorInt{
 	public static void main(String arg[]){
 	
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 		int vtr[], i, tam = 5;
 
 		vtr = new int[tam];

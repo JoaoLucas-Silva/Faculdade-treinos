@@ -4,7 +4,7 @@ public class MatrizInversaJoaoLucas{
 
 	public static void main(String arg[]){
 	
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 		int mat[][], i, j, lin = 3, col = 3;
 
 		mat = new int[lin][col];

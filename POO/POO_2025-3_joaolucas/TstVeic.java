@@ -4,7 +4,7 @@ public class TstVeic{
 
 	public static void main(String arg[]){
 		
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 		
 		System.out.println("========================================");
 		System.out.println("Cadastro dos veiculos: passeio e carga");

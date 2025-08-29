@@ -6,7 +6,7 @@ public class TstWrap{
 
 	public static void main(String arg[]){
 		
-		Leitura l = new Leitura();
+		Leitura1 l = new Leitura1();
 		int op;
 
 		System.out.println("\nMenu:\n1 - Integer\n2 - Boolean\n3 - Character\n4 - Double\n5 - Byte\n6 - Short\n7 - Float\n8 - Long\n0 - Sair\n");

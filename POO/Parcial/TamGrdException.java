@@ -2,13 +2,13 @@
 
 public class TamGrdException extends Exception{
 	
-		Leitura l = new Leitura();
+		leitura l = new leitura();
 	
 		public void grandeTam(){
 			System.out.println("\nTamanho deve ser menor de 200cm!");
 		}
 		
-		public Planta rePlantaGrd(Planta plantas){
+		public Planta1 rePlantaGrd(Planta1 plantas){
 			
 			try{
 				plantas.setTamanho(Integer.parseInt(l.entDados("\nTamanho grande demais, digite outro: ")));
