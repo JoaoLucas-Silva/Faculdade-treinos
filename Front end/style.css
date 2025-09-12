@@ -1,3 +1,12 @@
-body{
+body {
     background-color: darkkhaki;
+}
+
+#tp {
+    font-style: italic;
+}
+
+.destaque {
+    font-style: bold;
+    color: rgb(81, 103, 121);
 }
