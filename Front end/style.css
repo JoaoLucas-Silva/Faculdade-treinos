@@ -2,18 +2,29 @@ body {
     background-color: ghostwhite;
 }
 
+h1,
+h2,
+h3 {
+    background-color: rgb(193, 212, 236);
+}
+
 #tp {
     font-style: italic;
-    font-varia
+    font-family: 'JetBrains Mono', serif;
+    text-decoration: underline;
 }
 
 .destaque {
-    color: rgb(67, 159, 235);
+    color: rgb(53, 95, 56);
 }
 
-a {
+a [href] {
     font-style: inherit;
-    color: rgb(42, 65, 95)
+    color: rgb(42, 65, 95);
+}
+
+.center {
+    text-align: center;
 }
 
 a:hover {
