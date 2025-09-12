@@ -1,12 +1,25 @@
 body {
-    background-color: darkkhaki;
+    background-color: ghostwhite;
 }
 
 #tp {
     font-style: italic;
+    font-varia
 }
 
 .destaque {
-    font-style: bold;
-    color: rgb(81, 103, 121);
+    color: rgb(67, 159, 235);
+}
+
+a {
+    font-style: inherit;
+    color: rgb(42, 65, 95)
+}
+
+a:hover {
+    color: red;
+}
+
+* {
+    font-family: 'Times New Roman', Times, serif;
 }
