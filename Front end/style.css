@@ -28,12 +28,6 @@ h3 {
     object-fit: cover;
 }
 
-#ic {
-    font-size: large;
-    font-family: 'Times New Roman', Times, serif;
-    text-decoration: underline;
-}
-
 .destaque {
     color: rgb(53, 95, 56);
 }
