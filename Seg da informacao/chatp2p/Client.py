@@ -6,6 +6,11 @@ import time
 import threading
 import select
 import traceback
+import os
+from cryptography.hazmat.primitives.ciphers.aead import AESGCM
+
+key = AESGCM.generate_key(bit_lenght = 128)
+nonce = os.urandom(12)
 
 class Server(threading.Thread):
     def initialise(self, receive):
