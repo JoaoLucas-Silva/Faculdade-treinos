@@ -9,8 +9,10 @@ import traceback
 import os
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
-key = AESGCM.generate_key(bit_lenght = 128)
-nonce = os.urandom(12)
+print(os.urandom(16))
+print (os.urandom(12))
+key = b'W\xaam\xaa\xc8 M\xda\x0b~\xd4\xb5\xa5\xcb\x1az'
+nonce = b's\x96nK&\xb6y\xf6\xcbX\xbc\x1e'
 aesgcm = AESGCM(key)
 
 class Server(threading.Thread):
@@ -27,6 +29,7 @@ class Server(threading.Thread):
                     s = item.recv(1024)
                     if s != '':
                         chunk = s
+                        chunk = aesgcm.decrypt(nonce, chunk, b"secret message") # Descriptografia
                         print(chunk.decode() + '\n>>')
                 except:
                     traceback.print_exc(file=sys.stdout)
@@ -71,6 +74,7 @@ class Client(threading.Thread):
                 continue
             msg = user_name + ': ' + msg
             data = msg.encode()
+            data = aesgcm.encrypt(nonce, data, b"secret message") #Criptografia
             self.client(host, port, data)
         return (1)
 
